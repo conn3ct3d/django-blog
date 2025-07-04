@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <article class="post">
+        <h2>{{ post.title }}</h2>
+        <div class="post-meta">
+            By {{ post.author }} on {{ post.date_posted|date:"F d, Y" }}
+        </div>
+        <p>{{ post.content|linebreaks }}</p>
+    </article>
+{% endblock content %}
